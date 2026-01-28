@@ -22,3 +22,4 @@ SELECT tytul FROM ksiazki WHERE tytul LIKE '%a%';
 SELECT a.tytul, b.gatunek FROM ksiazki a INNER JOIN gatunki b on a.id_gatunku = b.id_gatunku
 SELECT substring(kod_pocztowy, 1, 2) FROM klienci;
 
+SELECT round((Cena * SUM(Cena)) / 100, 2) AS udzial_w_proc FROM ksiazki GROUP BY id_ksiazki;
